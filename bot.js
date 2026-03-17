@@ -8,7 +8,7 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
-  const text = `Welcome to 𝐐𝐔𝐎𝐓𝐄𝐗_𝐀𝐋𝐏𝐇𝐀_𝐋𝐄𝐆𝐄𝐍𝐃! 📊🇮🇳\n\nDaily market insights, charts, and educational trading setups.\nTap the buttons below 👇\n\n⚠️ Disclaimer:\nWe do NOT provide investment advice.\nAll market analysis is ONLY for educational purposes.`;
+  const text = `Welcome to 𝐐𝐔𝐎𝐓𝐄𝐗_𝐀𝐋𝐏𝐇𝐀_𝐋𝐄𝐆𝐄𝐍𝐃! 📊🇮🇳\n\nDaily market insights, charts, and educational trading setups.\nTap the buttons below 👇`;
 
   const options = {
     reply_markup: {
@@ -20,6 +20,12 @@ bot.onText(/\/start/, (msg) => {
   };
 
   bot.sendMessage(chatId, text, options);
+
+  setTimeout(() => {
+    bot.sendMessage(chatId,
+      "⚠️ Disclaimer:\nWe do NOT provide investment advice.\nAll market analysis is ONLY for educational purposes."
+    );
+  }, 1000);
 });
 
 bot.on('callback_query', (query) => {
