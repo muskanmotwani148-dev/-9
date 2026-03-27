@@ -30,8 +30,9 @@ bot.onText(/\/start/, (msg) => {
 
 bot.on('callback_query', (query) => {
   if (query.data === 'joined') {
-    bot.sendMessage(query.message.chat.id,
-      "✅ "✅ You're successfully connected!\n\nGet ready to explore daily market insights, learning-based chart analysis, and educational trading concepts.\n\nStay tuned and keep growing! 📈"! 📈"
+    bot.sendMessage(
+      query.message.chat.id,
+      "✅ You're successfully connected!\n\nGet ready to explore daily market insights, learning-based chart analysis, and educational trading concepts.\n\nStay tuned and keep growing! 📈"
     );
     bot.answerCallbackQuery(query.id);
   }
