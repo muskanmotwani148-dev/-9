@@ -8,7 +8,7 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
-  const text = `Welcome to 𝐐𝐔𝐎𝐓𝐄𝐗_𝐀𝐋𝐏𝐇𝐀_𝐋𝐄𝐆𝐄𝐍𝐃! 📊🇮🇳\n\nDaily market insights, charts, and educational trading setups.\nTap the buttons below 👇`;
+  const text = `Welcome to 𝐐𝐔𝐎𝐓𝐄𝐗_𝐀𝐋𝐏𝐇𝐀_𝐋𝐄𝐆𝐄𝐍𝐃! 📊🇮🇳\n\nGet daily market insights, chart breakdowns, and trading setups designed purely for educational growth and skill development\nTap the buttons below 👇`;
 
   const options = {
     reply_markup: {
@@ -23,7 +23,7 @@ bot.onText(/\/start/, (msg) => {
 
   setTimeout(() => {
     bot.sendMessage(chatId,
-      "⚠️ Disclaimer:\nWe do NOT provide investment advice.\nAll market analysis is ONLY for educational purposes."
+      "⚠️ Disclaimer:\nWe do not provide any investment or financial advice. All market analysis is shared strictly for educational and learning purposes only.."
     );
   }, 1000);
 });
@@ -31,7 +31,7 @@ bot.onText(/\/start/, (msg) => {
 bot.on('callback_query', (query) => {
   if (query.data === 'joined') {
     bot.sendMessage(query.message.chat.id,
-      "✅ Thank you for joining!\n\nYou will now receive daily market insights and educational trading setups.\n\nStay tuned! 📈"
+      "✅ "✅ You're successfully connected!\n\nGet ready to explore daily market insights, learning-based chart analysis, and educational trading concepts.\n\nStay tuned and keep growing! 📈"! 📈"
     );
     bot.answerCallbackQuery(query.id);
   }
