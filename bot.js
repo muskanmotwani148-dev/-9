@@ -8,7 +8,7 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
-  const text = `Welcome to 𝐐𝐔𝐎𝐓𝐄𝐗_𝐀𝐋𝐏𝐇𝐀_𝐋𝐄𝐆𝐄𝐍𝐃! 📊🇮🇳\n\nGet daily market insights, chart breakdowns, and trading setups designed purely for educational growth and skill development\nTap the buttons below 👇`;
+  const text = `Welcome to 𝐀𝐋𝐏𝐇𝐀_𝐋𝐄𝐆𝐄𝐍𝐃! 📊🇮🇳\n\nGet daily market insights, chart breakdowns, and trading setups designed purely for educational growth and skill development\nTap the buttons below 👇`;
 
   const options = {
     reply_markup: {
