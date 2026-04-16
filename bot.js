@@ -14,7 +14,6 @@ bot.onText(/\/start/, (msg) => {
     reply_markup: {
       inline_keyboard: [
         [{ text: "📢 Join Official Channel", url: CHANNEL_LINK }],
-        [{ text: "I Joined 👍", callback_data: "joined" }]
       ]
     }
   };
@@ -23,7 +22,6 @@ bot.onText(/\/start/, (msg) => {
 
   setTimeout(() => {
     bot.sendMessage(chatId,
-      "⚠️ Disclaimer:\nWe do not provide any investment or financial advice. All market analysis is shared strictly for educational and learning purposes only.."
     );
   }, 1000);
 });
